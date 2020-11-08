@@ -1,4 +1,4 @@
 #!/bin/bash
 
 make -f Makefile.PHONY.wasm clean
-emcc merkle_tree.c md5.c -o merkle.html
+emcc merkle_tree.c md5.c -o index.html

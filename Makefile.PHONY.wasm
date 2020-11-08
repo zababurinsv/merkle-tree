@@ -14,4 +14,4 @@ install:
 uninstall:
 	rm -rf ../dist/*.js ../dist/*.wasm
 clean:
-	rm -f $(OBJS) $(EXE) $(EXE_native) $(EXE_html) $(EXE_module) $(EXE_native).wasm
+	rm -f $(OBJS) $(EXE) $(EXE_native) $(EXE_html) $(EXE_module) $(EXE_native).wasm index.wasm index.html index.js
