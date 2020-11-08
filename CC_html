@@ -1,0 +1,7 @@
+#!/bin/bash
+
+make -f Makefile.PHONY.wasm clean
+#emmake make index.html \
+#CC=emcc \
+#CFLAGS="-s USE_ZLIB=1 -s EXTRA_EXPORTED_RUNTIME_METHODS=['callMain'] -s FORCE_FILESYSTEM=1"
+emcc merkle_tree.c md5.c -o merkle.html

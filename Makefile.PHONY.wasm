@@ -1,0 +1,12 @@
+.PHONY: all clean install uninstall
+
+SRCS			= merkle_tree.c md5.c
+OBJS			= $(SRCS:.c=.o)
+
+install:
+	install ./*.js ./*.wasm ../dist/
+	rm -fr *.js *.o *.html *.wasm *.wasm.map
+uninstall:
+	rm -rf ../dist/*.js ../dist/*.wasm
+clean:
+	rm -f $(OBJS) $(EXE) $(DLL)
