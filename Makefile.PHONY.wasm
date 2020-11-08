@@ -3,10 +3,15 @@
 SRCS			= merkle_tree.c md5.c
 OBJS			= $(SRCS:.c=.o)
 
+EXE_native	= merkle
+EXE_html	= merkle.html
+EXE_module	= merkle.js
+EXE			= $(EXE_$(ARCH))
+
 install:
 	install ./*.js ./*.wasm ../dist/
 	rm -fr *.js *.o *.html *.wasm *.wasm.map
 uninstall:
 	rm -rf ../dist/*.js ../dist/*.wasm
 clean:
-	rm -f $(OBJS) $(EXE) $(DLL)
+	rm -f $(OBJS) $(EXE) $(EXE_native) $(EXE_html) $(EXE_module) $(EXE_native).wasm

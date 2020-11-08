@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make clean
-make
+make -f Makefile.PHONY.wasm clean
+emcc merkle_tree.c md5.c -o merkle.js
